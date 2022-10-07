@@ -15,7 +15,8 @@
   },
   "main": "./lib/barnowlenocean.js",
   "scripts": {
-    "start": "node bin/barnowl-enocean"
+    "start": "node bin/barnowl-enocean",
+    "forwarder": "node bin/barnowl-enocean-forwarder"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const dgram = require('dgram');
+const BarnowlEnOcean = require('../lib/barnowlenocean.js');
+
+const client = dgram.createSocket('udp4');
+let barnowl = new BarnowlEnOcean();
+
+barnowl.addListener(BarnowlEnOcean.SerialListener, {});
+
+barnowl.on('raddec', function(raddec) {
+  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
+                                             includePackets: true });
+  client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
+              function(err) { });
+});
