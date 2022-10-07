@@ -2,14 +2,14 @@
   "name": "barnowl-enocean",
   "homepage": "https://github.com/reelyactive/barnowl-enocean/",
   "author": "reelyActive <webdev@reelyactive.com>",
-  "description": "Collect ambient EnOcean radio standard packets from EnOcean Serial Protocol (ESP) devices.  We believe in an open Internet of Things.",
+  "description": "Collect ambient EnOcean Wireless Standard packets from EnOcean Serial Protocol (ESP) devices.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "EnOcean",
     "ESP",
     "raddec"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "node": ">=6.0.0"
   },
