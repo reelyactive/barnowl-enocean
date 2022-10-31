@@ -109,6 +109,10 @@ __barnowl-enocean__ includes a script to forward data to a local [Pareto Anywher
 
     npm run forwarder
 
+Install __Pareto Anywhere__ _and_ __barnowl-enocean__ by following a step-by-step tutorial on our [reelyActive Developers](https://reelyactive.github.io/) site:
+- [Run Pareto Anywhere on a PC](https://reelyactive.github.io/diy/pareto-anywhere-pc/)
+- [Run Pareto Anywhere on a Pi](https://reelyactive.github.io/diy/pareto-anywhere-pi/)
+
 
 Contributing
 ------------
