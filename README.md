@@ -1,18 +1,18 @@
 barnowl-enocean
 ===============
 
-__barnowl-enocean__ converts ambient EnOcean Wireless Standard packets collected from EnOcean Serial Protocol (ESP) devices into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
-- RFID: _what_ is present, based on the device identifier?
-- RTLS: _where_ is it relative to the receiving devices?
-- M2M: _how_ is its status, based on any payload included in the packet?
+__barnowl-enocean__ converts ambient EnOcean Wireless Standard packets collected from EnOcean Serial Protocol (ESP) devices into standard developer-friendly JSON that is vendor/technology/application-agnostic.
+
+![Overview of barnowl-enocean](https://reelyactive.github.io/barnowl-enocean/images/overview.png)
 
 __barnowl-enocean__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-enocean) that can run on resource-constrained edge devices.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
 
 
-Installation
-------------
+Getting Started
+---------------
 
-    npm install barnowl-enocean
+Learn "owl" about the __raddec__ JSON data output:
+-  [reelyActive Developer's Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/)
 
 
 Quick Start
@@ -22,7 +22,7 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-__barnowl-enocean__ will attempt to connect to an EnOcean Serial Protocol device (ex: USB dongle) and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+__barnowl-enocean__ will attempt to connect to an EnOcean Serial Protocol device (ex: USB dongle) and output (flattened) __raddec__ JSON to the console.
 
 
 Hello barnowl-enocean!
@@ -68,16 +68,6 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
 Regardless of the underlying RF protocol and hardware, the [raddec](https://github.com/reelyactive/raddec/) specifies _what_ (transmitterId) is _where_ (receiverId & rssi), as well as _how_ (packets) and _when_ (timestamp).
 
 
-Is that owl you can do?
------------------------
-
-While __barnowl-enocean__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
-- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
-- [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
-
-These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes several __barnowl-x__ listeners.
-
-
 Supported Listener Interfaces
 -----------------------------
 
@@ -100,6 +90,16 @@ Provides a steady stream of simulated packets for testing purposes.
 ```javascript
 barnowl.addListener(BarnowlEnOcean.TestListener, {});
 ```
+
+
+Is that owl you can do?
+-----------------------
+
+While __barnowl-enocean__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
+- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
+- [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
+
+These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes several __barnowl-x__ listeners.
 
 
 Pareto Anywhere Integration
