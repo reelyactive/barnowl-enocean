@@ -68,6 +68,14 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
 Regardless of the underlying RF protocol and hardware, the [raddec](https://github.com/reelyactive/raddec/) specifies _what_ (transmitterId) is _where_ (receiverId & rssi), as well as _how_ (packets) and _when_ (timestamp).
 
 
+Identifiers and Packet Formats
+------------------------------
+
+The `receiverId` is a 128-bit UUID, which, as of v1.0.0, is generated on a per-session basis.  In future versions, this UUID may remain persistent across sessions for a specific USB dongle.
+
+Each `packets` entry is an EnOcean Serial Protocol 3 (ESP3) packet (from Sync byte to CRC8D, inclusive).
+
+
 Supported Listener Interfaces
 -----------------------------
 
