@@ -54,13 +54,13 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
   transmitterIdType: 7,
   rssiSignature: [
     {
-      receiverId: null,
-      receiverIdType: 0,
+      receiverId: "38bdfde8b5e5415a830551bda6484c23",
+      receiverIdType: 6,
       rssi: -58,
       numberOfDecodings: 1
     }
   ],
-  packets: [ 'd2ad98000c8c08f55a400414155980' ],
+  packets: [ '55000f07012bd295db00b163e0f85800041415598001ffffffff3b0047' ],
   timestamp: 1645568542222
 }
 ```
@@ -112,6 +112,12 @@ __barnowl-enocean__ includes a script to forward data to a local [Pareto Anywher
 Install __Pareto Anywhere__ _and_ __barnowl-enocean__ by following a step-by-step tutorial on our [reelyActive Developers](https://reelyactive.github.io/) site:
 - [Run Pareto Anywhere on a PC](https://reelyactive.github.io/diy/pareto-anywhere-pc/)
 - [Run Pareto Anywhere on a Pi](https://reelyactive.github.io/diy/pareto-anywhere-pi/)
+
+
+Project History
+---------------
+
+__barnowl-enocean__ v1.0.0 was released in January 2024, superseding all earlier versions, the latest of which remains in the [release-0.3 branch](https://github.com/reelyactive/barnowl-enocean/tree/release-0.3) and as [barnowl-enocean@0.3.1 on npm](https://www.npmjs.com/package/barnowl-enocean/v/0.3.1).
 
 
 Contributing
