@@ -1,0 +1,12 @@
+[Unit]
+Description=EnOcean USB dongle packet forwarder by reelyActive
+After=network.target
+
+[Service]
+WorkingDirectory=/home/reelyactive/barnowl-enocean
+ExecStart=/usr/bin/npm run forwarder
+Restart=on-failure
+User=reelyactive
+
+[Install]
+WantedBy=multi-user.target
